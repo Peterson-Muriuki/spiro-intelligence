@@ -177,7 +177,7 @@ st.dataframe(
     summary.style.format({
         "Monthly Rev ($)": "${:,.0f}",
         "Avg Churn Risk":  "{:.1f}%",
-    }).background_gradient(subset=["Monthly Rev ($)"], cmap="Greens"),
+    }),
     use_container_width=True,
     hide_index=True,
 )

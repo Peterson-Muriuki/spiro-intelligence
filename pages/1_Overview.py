@@ -115,8 +115,7 @@ top_cols = [c for c in
             if c in turnover.columns]
 st.dataframe(
     turnover[top_cols].sort_values("daily_avg", ascending=False).head(20)
-    .style.format({"daily_avg": "{:.1f}", "utilisation_pct": "{:.0f}%"})
-    .background_gradient(subset=["utilisation_pct"], cmap="YlGn"),
+    .style.format({"daily_avg": "{:.1f}", "utilisation_pct": "{:.0f}%"}),
     use_container_width=True, hide_index=True,
 )
 

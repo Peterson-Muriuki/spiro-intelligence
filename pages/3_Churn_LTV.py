@@ -141,8 +141,7 @@ display_cols = [c for c in
 
 st.dataframe(
     at_risk[display_cols].head(50)
-    .style.format({"churn_score": "{:.2f}", "monthly_revenue": "${:.0f}", "ltv": "${:.0f}"})
-    .background_gradient(subset=["churn_score"], cmap="Reds"),
+    .style.format({"churn_score": "{:.2f}", "monthly_revenue": "${:.0f}", "ltv": "${:.0f}"}),
     use_container_width=True, hide_index=True,
 )
 

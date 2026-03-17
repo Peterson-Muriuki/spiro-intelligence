@@ -109,7 +109,7 @@ st.dataframe(
         "nearest_station_km": "{:.2f}",
         "demand_density":     "{:.2f}",
         "coverage_gap":       "{:.2f}",
-    }).background_gradient(subset=["deployment_score"], cmap="YlOrRd"),
+    }),
     use_container_width=True, hide_index=True,
 )
 
