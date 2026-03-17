@@ -1,0 +1,86 @@
+station_id,country,city,lat,lon,capacity,status,year_deployed,zone_type
+ST0001,Kenya,Nairobi,-1.271488,36.813075,10,active,2022,residential
+ST0002,Kenya,Nairobi,-1.266958,36.862914,10,active,2024,industrial
+ST0003,Kenya,Nairobi,-1.293414,36.810199,10,active,2020,residential
+ST0004,Kenya,Nairobi,-1.239013,36.840246,10,active,2024,industrial
+ST0005,Kenya,Mombasa,-4.057561,39.684483,40,active,2024,commercial
+ST0006,Kenya,Mombasa,-4.05738,39.654234,20,active,2023,residential
+ST0007,Kenya,Mombasa,-4.036218,39.610808,20,active,2022,industrial
+ST0008,Kenya,Mombasa,-4.095225,39.651337,10,inactive,2022,transit hub
+ST0009,Kenya,Mombasa,-4.073862,39.677633,10,active,2023,industrial
+ST0010,Kenya,Kisumu,-0.118943,34.725587,30,inactive,2024,transit hub
+ST0011,Kenya,Kisumu,-0.047733,34.761183,20,active,2020,residential
+ST0012,Kenya,Kisumu,-0.089676,34.725214,30,inactive,2020,commercial
+ST0013,Kenya,Kisumu,-0.108033,34.771284,40,active,2022,transit hub
+ST0014,Kenya,Nakuru,-0.337629,36.091297,30,active,2022,transit hub
+ST0015,Kenya,Nakuru,-0.321118,36.071275,10,active,2024,residential
+ST0016,Kenya,Nakuru,-0.32115,36.135594,20,active,2023,residential
+ST0017,Kenya,Nakuru,-0.303504,36.048295,30,active,2020,commercial
+ST0018,Kenya,Nakuru,-0.278423,36.043401,30,active,2023,residential
+ST0019,Nigeria,Lagos,6.530645,3.320416,30,active,2021,industrial
+ST0020,Nigeria,Lagos,6.484533,3.385112,40,active,2021,residential
+ST0021,Nigeria,Lagos,6.546533,3.384347,30,active,2024,industrial
+ST0022,Nigeria,Lagos,6.52091,3.370173,30,maintenance,2021,residential
+ST0023,Nigeria,Lagos,6.480023,3.357611,40,active,2020,commercial
+ST0024,Nigeria,Lagos,6.51056,3.41092,20,active,2021,industrial
+ST0025,Nigeria,Lagos,6.534688,3.326315,10,active,2023,industrial
+ST0026,Nigeria,Lagos,6.534102,3.367654,30,inactive,2024,commercial
+ST0027,Nigeria,Abuja,9.051956,7.509652,30,active,2022,industrial
+ST0028,Nigeria,Abuja,9.103194,7.51924,20,active,2023,transit hub
+ST0029,Nigeria,Abuja,9.047087,7.482026,20,maintenance,2024,transit hub
+ST0030,Nigeria,Abuja,9.082202,7.520568,20,active,2021,residential
+ST0031,Nigeria,Kano,11.985745,8.51115,10,active,2024,commercial
+ST0032,Nigeria,Kano,11.96693,8.480834,10,inactive,2022,transit hub
+ST0033,Nigeria,Kano,12.024496,8.557407,20,active,2020,commercial
+ST0034,Nigeria,Kano,11.99796,8.546826,10,inactive,2023,residential
+ST0035,Nigeria,Kano,12.010969,8.497366,20,maintenance,2023,residential
+ST0036,Nigeria,Kano,12.010962,8.562861,30,inactive,2024,industrial
+ST0037,Nigeria,Kano,11.999045,8.563659,20,active,2024,residential
+ST0038,Nigeria,Kano,11.921528,8.541377,30,maintenance,2023,transit hub
+ST0039,Nigeria,Port Harcourt,4.817944,7.040474,40,active,2020,commercial
+ST0040,Nigeria,Port Harcourt,4.818086,6.989817,30,active,2020,residential
+ST0041,Nigeria,Port Harcourt,4.808743,7.060157,20,active,2020,commercial
+ST0042,Nigeria,Port Harcourt,4.85967,7.033896,20,maintenance,2020,transit hub
+ST0043,Nigeria,Port Harcourt,4.791078,7.034391,10,active,2024,industrial
+ST0044,Nigeria,Port Harcourt,4.842795,7.059307,20,active,2024,industrial
+ST0045,Nigeria,Port Harcourt,4.79944,7.064842,20,inactive,2023,residential
+ST0046,Rwanda,Kigali,-1.941088,30.087759,10,active,2023,industrial
+ST0047,Rwanda,Kigali,-1.965062,30.04887,40,active,2020,commercial
+ST0048,Rwanda,Kigali,-1.955763,30.014795,10,active,2023,commercial
+ST0049,Rwanda,Kigali,-1.935116,30.066532,20,active,2021,industrial
+ST0050,Rwanda,Butare,-2.597347,29.732662,40,active,2021,residential
+ST0051,Rwanda,Butare,-2.639961,29.727081,10,inactive,2023,commercial
+ST0052,Rwanda,Butare,-2.607781,29.715632,10,inactive,2024,commercial
+ST0053,Rwanda,Butare,-2.602339,29.751822,20,active,2021,industrial
+ST0054,Rwanda,Butare,-2.540914,29.744937,20,maintenance,2023,residential
+ST0055,Rwanda,Gisenyi,-1.692673,29.255467,10,active,2023,industrial
+ST0056,Rwanda,Gisenyi,-1.757963,29.256905,30,active,2023,industrial
+ST0057,Rwanda,Gisenyi,-1.698593,29.331597,20,active,2021,commercial
+ST0058,Rwanda,Gisenyi,-1.706171,29.266746,10,active,2022,industrial
+ST0059,Rwanda,Gisenyi,-1.701441,29.22264,20,maintenance,2020,commercial
+ST0060,Rwanda,Gisenyi,-1.666115,29.280258,20,active,2020,residential
+ST0061,Rwanda,Gisenyi,-1.676669,29.230418,40,maintenance,2020,residential
+ST0062,Uganda,Kampala,0.38968,32.540464,10,active,2024,transit hub
+ST0063,Uganda,Kampala,0.365202,32.648234,30,active,2021,transit hub
+ST0064,Uganda,Kampala,0.31788,32.565531,20,active,2022,transit hub
+ST0065,Uganda,Kampala,0.350586,32.567416,40,maintenance,2022,commercial
+ST0066,Uganda,Kampala,0.301076,32.584577,10,active,2023,commercial
+ST0067,Uganda,Kampala,0.315727,32.596728,10,active,2024,transit hub
+ST0068,Uganda,Kampala,0.320013,32.629018,20,inactive,2022,residential
+ST0069,Uganda,Kampala,0.324098,32.572858,30,active,2022,transit hub
+ST0070,Uganda,Entebbe,0.087806,32.426874,10,active,2024,commercial
+ST0071,Uganda,Entebbe,0.070224,32.503014,20,active,2022,commercial
+ST0072,Uganda,Entebbe,0.015176,32.469339,20,active,2022,residential
+ST0073,Uganda,Entebbe,0.071196,32.487255,30,active,2021,transit hub
+ST0074,Uganda,Entebbe,0.026291,32.424186,40,maintenance,2022,commercial
+ST0075,Uganda,Entebbe,0.079058,32.47271,10,inactive,2023,commercial
+ST0076,Uganda,Entebbe,0.070915,32.474193,10,active,2022,transit hub
+ST0077,Uganda,Entebbe,0.042999,32.470768,20,active,2023,industrial
+ST0078,Uganda,Jinja,0.456592,33.181169,10,active,2020,residential
+ST0079,Uganda,Jinja,0.503773,33.216815,10,active,2022,residential
+ST0080,Uganda,Jinja,0.412061,33.222297,40,active,2021,transit hub
+ST0081,Uganda,Jinja,0.41856,33.226213,10,active,2022,residential
+ST0082,Uganda,Jinja,0.482558,33.17798,10,active,2022,industrial
+ST0083,Uganda,Jinja,0.476701,33.214983,20,inactive,2021,residential
+ST0084,Uganda,Jinja,0.472462,33.259504,40,active,2020,transit hub
+ST0085,Uganda,Jinja,0.440438,33.179988,40,active,2021,commercial
