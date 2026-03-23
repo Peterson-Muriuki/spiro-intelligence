@@ -1,8 +1,3 @@
-"""
-generate_data.py
-Generates synthetic but realistic data for the Spiro Swap Station Intelligence dashboard.
-Run once: python data/generate_data.py
-"""
 import pandas as pd
 import numpy as np
 from faker import Faker

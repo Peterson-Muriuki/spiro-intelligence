@@ -2,14 +2,6 @@
 app.py  ·  Spiro Swap Station Intelligence Dashboard
 Entry point — run with: streamlit run app.py
 
-Integration notes:
-  - Loads all data once, caches it, shares via st.session_state
-  - If CSVs are missing, auto-runs generate_data.py on first launch
-  - All pages read from session_state — no page re-reads CSVs independently
-  - Financial model assumptions are also stored in session_state so the
-    6_Financial_Model page picks up any country-level context
-  - set_page_config lives ONLY here; pages must NOT call it
-"""
 import streamlit as st
 import pandas as pd
 import os, sys, subprocess
