@@ -107,5 +107,5 @@ streamlit run app.py
 
 ---
 
-*Built by Peterson Muriuki — Data Analyst | Financial Engineer*
+*Built by Peterson Muriuki - Data Analyst | Financial Engineer*
 *[pitmuriuki@gmail.com](mailto:pitmuriuki@gmail.com) | [GitHub](https://github.com) | [LinkedIn](https://www.linkedin.com/in/peterson-muriuki-5857aaa9/)*
