@@ -1,6 +1,5 @@
-"""
-app.py  ·  Spiro Swap Station Intelligence Dashboard
-Entry point — run with: streamlit run app.py
+# app.py  ·  Spiro Swap Station Intelligence Dashboard
+# Entry point — run with: streamlit run app.py
 
 import streamlit as st
 import pandas as pd
@@ -10,10 +9,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # ── Page config (MUST be first Streamlit call) ─────────────────────────────
 st.set_page_config(
-    page_title          = "Spiro Intelligence",
-    page_icon           = "⚡",
-    layout              = "wide",
-    initial_sidebar_state = "expanded",
+    page_title="Spiro Intelligence",
+    page_icon="⚡",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 # ── Auto-generate data if CSVs are missing ─────────────────────────────────
@@ -62,7 +61,6 @@ st.session_state["revenue"]   = revenue
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
 with st.sidebar:
-    # Logo — graceful fallback if image unavailable
     try:
         st.image(
             "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ev_logo.svg/120px-Ev_logo.svg.png",
@@ -75,7 +73,7 @@ with st.sidebar:
     st.caption("Country Manager Decision Support")
     st.markdown("---")
 
-    # Country filter — shared across all pages via session_state
+    # Country filter
     country_options  = ["All"] + sorted(stations["country"].unique().tolist())
     selected_country = st.selectbox("🌍 Country", country_options, key="country_selector")
     st.session_state["selected_country"] = selected_country
@@ -83,7 +81,7 @@ with st.sidebar:
     st.markdown("---")
 
     # Live alerts
-    from utils.kpis   import compute_station_kpis
+    from utils.kpis import compute_station_kpis
     from utils.alerts import generate_alerts, format_alert_html
 
     kpis   = compute_station_kpis(stations, swaps, revenue)
@@ -98,24 +96,22 @@ with st.sidebar:
 
     st.markdown("---")
 
-    # Navigation hint
+    # ✅ FIXED BLOCK (no indentation issues)
     st.markdown(
-        """
-        **Pages**
-        1. 📊 Overview
-        2. 🗺️ Station Map
-        3. 🔮 Churn & LTV
-        4. 📍 Deployment
-        5. 📄 Reports
-        6. 💹 Financial Model
-        """,
-        unsafe_allow_html=False,
+"""**Pages**
+1. 📊 Overview
+2. 🗺️ Station Map
+3. 🔮 Churn & LTV
+4. 📍 Deployment
+5. 📄 Reports
+6. 💹 Financial Model
+""",
+    unsafe_allow_html=False,
     )
 
     st.markdown("---")
     st.caption(f"Refreshed: {pd.Timestamp.now().strftime('%d %b %Y %H:%M')}")
 
-    # Refresh button
     if st.button("🔄 Refresh Data"):
         st.cache_data.clear()
         st.rerun()
@@ -125,27 +121,32 @@ st.markdown("## ⚡ Spiro Swap Station Intelligence")
 st.markdown("*Country Manager Decision Support System — Analytics, Operations & Finance*")
 st.markdown("---")
 
-# Top-line KPI cards
+# KPIs
 col1, col2, col3, col4, col5 = st.columns(5)
+
 col1.metric(
     "Active Stations",
     kpis["active_stations"],
     f"of {kpis['total_stations']} total",
 )
+
 col2.metric(
     "Daily Turnover",
     f"{kpis['daily_turnover']}x",
     "swaps / station / day",
 )
+
 col3.metric(
     "Monthly Revenue",
     f"${kpis['monthly_revenue']:,.0f}",
     f"{kpis['revenue_growth_pct']:+.1f}% MoM",
 )
+
 col4.metric(
     "Swap Success Rate",
     f"{kpis['swap_success_rate']}%",
 )
+
 col5.metric(
     "Idle Hours / Day",
     f"{kpis['idle_hours_daily']}h",
@@ -160,34 +161,39 @@ st.info(
     "or jump to **6 Financial Model** for station economics and DCF analysis."
 )
 
-# Country summary table
+# Country summary
 from utils.kpis import country_summary
+
 summary = country_summary(stations, swaps, customers, revenue)
 
 st.markdown("### 🌍 Country Snapshot")
 st.dataframe(
     summary.style.format({
         "Monthly Rev ($)": "${:,.0f}",
-        "Avg Churn Risk":  "{:.1f}%",
+        "Avg Churn Risk": "{:.1f}%",
     }),
     use_container_width=True,
     hide_index=True,
 )
 
-# Quick financial model preview
+# Financial preview
 st.markdown("---")
 st.markdown("### 💹 Financial Model Quick View")
 
-from models.financial_model import unit_economics, breakeven_analysis, DEFAULTS
+from models.financial_model import unit_economics, breakeven_analysis
 
 ue = unit_economics({})
 be = breakeven_analysis({})
 
 fc1, fc2, fc3, fc4 = st.columns(4)
+
 fc1.metric("Revenue / Station / Month", f"${ue['gross_revenue']:,.0f}")
-fc2.metric("EBITDA / Station / Month",  f"${ue['ebitda']:,.0f}",
-           f"{ue['ebitda_margin_pct']:.1f}% margin")
-fc3.metric("Breakeven Swaps / Day",     f"{be['breakeven_swaps_per_day']}")
-fc4.metric("Margin of Safety",          f"{be['margin_of_safety_pct']:.1f}%")
+fc2.metric(
+    "EBITDA / Station / Month",
+    f"${ue['ebitda']:,.0f}",
+    f"{ue['ebitda_margin_pct']:.1f}% margin",
+)
+fc3.metric("Breakeven Swaps / Day", f"{be['breakeven_swaps_per_day']}")
+fc4.metric("Margin of Safety", f"{be['margin_of_safety_pct']:.1f}%")
 
 st.caption("👆 Default assumptions. Open **6 Financial Model** to adjust all parameters interactively.")
